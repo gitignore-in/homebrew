@@ -6,7 +6,8 @@ jobs:
   test_installation:
     strategy:
       matrix:
-        macos: [macos-11, macos-12, macos-13, macos-14]
+        # macos-14 runner is currently in public beta (2023-10-27)
+        macos: [macos-11, macos-12, macos-13]
     runs-on: ${{ matrix.macos }}
     steps:
       - name: Checkout
